@@ -1,13 +1,6 @@
 import React, { Component } from 'react'
 import  Header from './Header';
 import  Meta from './Meta';
-import styled from 'styled-components';
-
-const MyButton = styled.button`
-  background: red;
-  font-size: ${props => (props.huge ? '100px' : '50px')};
-`;
-
 
 class Page extends Component {
   render() {
@@ -15,10 +8,8 @@ class Page extends Component {
       <div>
         <Meta />
         <Header />
-        <MyButton huge>Click me!</MyButton>
         {/* this will render anything that we pass */}
         {this.props.children}
-        <MyButton>Click me!</MyButton>
       </div>
     )
   }
